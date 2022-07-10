@@ -14,7 +14,9 @@
     <input type="text" name="cocktail" placeholder="Enter a cocktail name" required />
     <input type="submit" value="Generate recipe" />
   </form>
-  {% if result %}
-  <div class="result">{{ result }}</div>
+  {% if cocktail %}
+  <div class="result">{{ cocktail }}</div>
+  <div class="result">Normal recipe: {{ result_normal }}</div>
+  <div class="result">Strange recipe: {{ result_absurd }}</div>
   {% endif %}
 </body>
