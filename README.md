@@ -1,6 +1,7 @@
-# OpenAI API Quickstart - Python example app
+# OpenAI Cocktail Recipes Generator 
 
-This is an example pet name generator app used in the OpenAI API [quickstart tutorial](https://beta.openai.com/docs/quickstart). It uses the [Flask](https://flask.palletsprojects.com/en/2.0.x/) web framework. Check out the tutorial or follow the instructions below to get set up.
+This is an example app for generating cocktail recipes by name. You may try both well-known cocktail names or try to invent your own.
+This app is based on the [pet name generator app](https://github.com/openai/openai-quickstart-python) used in the OpenAI API [quickstart tutorial](https://beta.openai.com/docs/quickstart). It uses the [Flask](https://flask.palletsprojects.com/en/2.0.x/) web framework. Check out the tutorial or follow the instructions below to get set up.
 
 ## Setup
 
