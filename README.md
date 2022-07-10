@@ -12,7 +12,7 @@ This app is based on the [pet name generator app](https://github.com/openai/open
 3. Navigate into the project directory
 
    ```bash
-   $ cd openai-quickstart-python
+   $ cd openai-cocktails
    ```
 
 4. Create a new virtual environment
