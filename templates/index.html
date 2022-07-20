@@ -39,11 +39,15 @@
 
     <script>
         window.parser = (sample) => {
-            const split = sample.split(". ");
-            if (split.length > 1) {
-                return split.join("<br/><br/>");
+            try {
+                const split = sample.split(". ");
+                if (split.length > 1) {
+                    return split.join("<br/><br/>");
+                }
+                return sample;
+            } catch (e) {
+                return sample;
             }
-            return sample;
 
         }
     </script>
