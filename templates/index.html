@@ -49,7 +49,7 @@
                 <div class="drink-style">Normal Recipe:</div>
                 <div class="result">
                     <script>
-                        document.write(window.parser({{ result_normal }}))
+                        document.write(window.parser("{{ result_normal }}"))
                     </script>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                 <div class="drink-style">Strange Recipe:</div>
                 <div class="result">
                     <script>
-                        document.write(window.parser({{ result_absurdl }}))
+                        document.write(window.parser("{{ result_absurd }}"))
                     </script>
                 </div>
             </div>
