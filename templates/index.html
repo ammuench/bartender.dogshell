@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 
 <head>
+    {% if cocktail %}
+    <title>Bartender.Dogshell: {{ cocktail }}</title>
+    <meta name="description" content="Echo made you a {{ cocktail }}">
+    <meta name="title" content="Bartender.Dogshell: {{ cocktail }}">
+    {% else %}
     <title>Bartender.Dogshell</title>
+    <meta name="description" content="Ask Echo the Dog to make you a beverage, using OpenAI!">
+    <meta name="title" content="Bartender.Dogshell">
+    {% endif %}
     <link rel="shortcut icon" href="{{ url_for('static', filename='headerimg.ico') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
-    <meta name="title" content="Bartender.Dogshell">
-    <meta name="description" content="Ask Echo the Dog to make you a beverage, using OpenAI!">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bartender.dogshell.xyz/">
+    {% if cocktail %}
+    <meta property="og:title" content="Bartender.Dogshell: {{ cocktail }}">
+    <meta name="og:description" content="Echo made you a {{ cocktail }}">
+    {% else %}
     <meta property="og:title" content="Bartender.Dogshell">
-    <meta property="og:description" content="Ask Echo the Dog to make you a beverage, using OpenAI!">
+    <meta name="og:description" content="Ask Echo the Dog to make you a beverage, using OpenAI!">
+    {% endif %}
     <meta property="og:image" content="https://bartender.dogshell.xyz{{ url_for('static', filename='meta.png') }}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://bartender.dogshell.xyz/">
+    {% if cocktail %}
+    <meta property="twitter:title" content="Bartender.Dogshell: {{ cocktail }}">
+    <meta name="twitter:description" content="Echo made you a {{ cocktail }}">
+    {% else %}
     <meta property="twitter:title" content="Bartender.Dogshell">
-    <meta property="twitter:description" content="Ask Echo the Dog to make you a beverage, using OpenAI!">
+    <meta name="twitter:description" content="Ask Echo the Dog to make you a beverage, using OpenAI!">
+    {% endif %}
     <meta property="twitter:image" content="https://bartender.dogshell.xyz{{ url_for('static', filename='meta.png') }}">
+
     <script>
         window.parser = (sample) => {
             const split = sample.split(".");
