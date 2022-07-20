@@ -70,7 +70,7 @@
                 <div class="drink-style">Normal Recipe:</div>
                 <div class="result">
                     <script>
-                        document.write(window.parser("{{ result_normal.strip() }}"))
+                        document.write(window.parser(`{{ result_normal.strip() }}`))
                     </script>
                 </div>
             </div>
@@ -78,7 +78,7 @@
                 <div class="drink-style">Strange Recipe:</div>
                 <div class="result">
                     <script>
-                        document.write(window.parser("{{ result_absurd.strip() }}"))
+                        document.write(window.parser(`{{ result_absurd.strip() }}`))
                     </script>
                 </div>
             </div>
