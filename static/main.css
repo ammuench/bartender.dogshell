@@ -1,45 +1,51 @@
-@font-face {
-  font-family: "ColfaxAI";
-  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2)
-      format("woff2"),
-    url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "ColfaxAI";
-  src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
-    url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
-body,
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
 input {
   font-size: 16px;
   line-height: 24px;
   color: #353740;
-  font-family: "ColfaxAI", Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 60px;
+  padding-top: 30px;
+  font-family: "Roboto", sans-serif;
+
+  display: grid;
+  grid-template: auto 1fr auto / 100%;
+  justify-items: center;
+  margin: 0;
+
+  background-color: #e7eff7;
 }
+
+main {
+  min-height: calc(100vh - 60px - 30px);
+}
+
+.header {
+  text-align: center;
+}
+
+.header img {
+  max-width: 250px;
+}
+
 .icon {
   width: 34px;
 }
 h3 {
-  font-size: 32px;
+  font-size: 36px;
   line-height: 40px;
   font-weight: bold;
   color: #202123;
-  margin: 16px 0 40px;
+  margin: 10px 0;
+  font-family: "Roboto Slab", serif;
 }
 form {
   display: flex;
   flex-direction: column;
   width: 320px;
+  margin: auto;
 }
 input[type="text"] {
   padding: 12px 16px;
@@ -60,7 +66,48 @@ input[type="submit"] {
   text-align: center;
   cursor: pointer;
 }
+
+.drink-output {
+  margin-top: 3rem;
+
+  display: grid;
+  max-width: 90vw;
+  grid-template-rows: auto auto auto;
+  gap: 30px;
+}
+
+.drink-output .drinktitle {
+  margin: 0;
+  text-align: center;
+
+  text-transform: capitalize;
+  font-family: "Roboto Slab", serif;
+
+  font-size: 28px;
+}
+
+.drink-card {
+  border: solid 1px #b4b4b4;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #fafafa;
+}
+
+.drink-style {
+  margin-bottom: 1.5rem;
+  border-bottom: double black;
+}
+
 .result {
-  font-weight: bold;
-  margin-top: 40px;
+  margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+footer {
+  font-size: 12px;
+  min-height: 60px;
+  display: grid;
+  grid-template: 1fr / 1fr;
+  justify-content: center;
+  align-content: center;
 }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Bartender @ Dogshell.XYZ</title>
+    <link rel="shortcut icon" href="/static/headerimg.ico" />
+    <link rel="stylesheet" href="/static/main.css" />
+</head>
+
+<body>
+    <main>
+        <header class="header">
+            <img src="/static/headerimg.png">
+            <h3>Make me a Drink!</h3>
+        </header>
+        <form action="/" method="post">
+            <input type="text" name="cocktail" placeholder="Enter a cocktail name" required />
+            <input type="submit" value="Generate recipe" />
+        </form>
+
+        <div class="drink-output">
+            <h4 class=" drinktitle">cheeto vodka</h4>
+            <div class="normal-drink drink-card">
+                <div class="drink-style">Normal Recipe:</div>
+                <div class="result">1 liter vodka, 1 package of Cheetos, ice. Pour the vodka into a clean,
+                    empty
+                    one-liter bottle. Add the Cheetos, seal the bottle, and shake until the Cheetos are completely
+                    crushed.
+                    Let
+                    the
+                    mixture sit for at least 24 hours, then strain out the Cheetos. Pour the vodka into a clean bottle
+                    and
+                    enjoy!
+                </div>
+            </div>
+            <div class="strange-drink drink-card">
+                <div class="drink-style">Strange Recipe:</div>
+                <div class="result">
+                    1 part Smirnoff vodka, 1 part dirty Daiquiri mix, 1 part way sweet Stirming shots of cinnamon
+                    vanilla,
+                    diet
+                    club
+                    soda.
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>A riff off of <a href="https://github.com/andrrey/openai-cocktails" target="_blank">openai-cocktails</a> by
+            <a href="https://alexmuen.ch" target="_blank">Alex Muench</a> || <a target="_blank"
+                href="https://www.flaticon.com/free-icons/cocktail-shaker" title="cocktail shaker icons">Cocktail shaker
+                icons
+                created by Freepik - Flaticon</a> || Dog Pic copyright &copy;
+            <script>document.write(new Date().getFullYear())</script> Alex Muench
+        </p>
+
+    </footer>
+</body>
