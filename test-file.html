@@ -4,6 +4,16 @@
     <title>Bartender @ Dogshell.XYZ</title>
     <link rel="shortcut icon" href="/static/headerimg.ico" />
     <link rel="stylesheet" href="/static/main.css" />
+    <script>
+        window.parser = (sample) => {
+            const split = sample.split(".");
+            if (split.length > 1) {
+                return split.join("<br/><br/>");
+            }
+            return sample;
+
+        }
+    </script>
 </head>
 
 <body>
@@ -21,7 +31,15 @@
             <h4 class=" drinktitle">cheeto vodka</h4>
             <div class="normal-drink drink-card">
                 <div class="drink-style">Normal Recipe:</div>
-                <div class="result">1 liter vodka, 1 package of Cheetos, ice. Pour the vodka into a clean,
+                <div class="result ">
+
+
+                    <script>
+                        document.write(window.parser("1 liter vodka, 1 package of Cheetos, ice. Pour the vodka into a clean, empty one-liter bottle. Add the Cheetos, seal the bottle, and shake until the Cheetos are completely crushed. Let the mixture sit for at least 24 hours, then strain out the Cheetos. Pour the vodka into a clean bottle and enjoy!"))
+
+                    </script>
+
+                    <!-- 1 liter vodka, 1 package of Cheetos, ice. Pour the vodka into a clean,
                     empty
                     one-liter bottle. Add the Cheetos, seal the bottle, and shake until the Cheetos are completely
                     crushed.
@@ -29,7 +47,7 @@
                     the
                     mixture sit for at least 24 hours, then strain out the Cheetos. Pour the vodka into a clean bottle
                     and
-                    enjoy!
+                    enjoy! -->
                 </div>
             </div>
             <div class="strange-drink drink-card">

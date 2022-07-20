@@ -1,22 +1,77 @@
 <!DOCTYPE html>
+
 <head>
-  <title>OpenAI Quickstart</title>
-  <link
-    rel="shortcut icon"
-    href="{{ url_for('static', filename='dog.png') }}"
-  />
-  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+    <title>Bartender.Dogshell</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='headerimg.ico') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+    <meta name="title" content="Bartender.Dogshell">
+    <meta name="description" content="Ask Echo the Dog to make you a beverage, using OpenAI!">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bartender.dogshell.xyz/">
+    <meta property="og:title" content="Bartender.Dogshell">
+    <meta property="og:description" content="Ask Echo the Dog to make you a beverage, using OpenAI!">
+    <meta property="og:image" content="{{ url_for('static', filename='meta.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bartender.dogshell.xyz/">
+    <meta property="twitter:title" content="Bartender.Dogshell">
+    <meta property="twitter:description" content="Ask Echo the Dog to make you a beverage, using OpenAI!">
+    <meta property="twitter:image" content="{{ url_for('static', filename='meta.png') }}">
+    <script>
+        window.parser = (sample) => {
+            const split = sample.split(".");
+            if (split.length > 1) {
+                return split.join("<br/><br/>");
+            }
+            return sample;
+
+        }
+    </script>
 </head>
 
 <body>
-  <h3>Generate my cocktail</h3>
-  <form action="/" method="post">
-    <input type="text" name="cocktail" placeholder="Enter a cocktail name" required />
-    <input type="submit" value="Generate recipe" />
-  </form>
-  {% if cocktail %}
-  <div class="result">{{ cocktail }}</div>
-  <div class="result">Normal recipe: {{ result_normal }}</div>
-  <div class="result">Strange recipe: {{ result_absurd }}</div>
-  {% endif %}
+    <main>
+        <header class="header">
+            <img src="{{ url_for('static', filename='headerimg.png') }}">
+            <h3>Make me a Drink!</h3>
+        </header>
+        <form action="/" method="post">
+            <input type="text" name="cocktail" placeholder="Enter a cocktail name" required />
+            <input type="submit" value="Generate Recipe" />
+        </form>
+        {% if cocktail %}
+        <div class="drink-output">
+            <h4 class=" drinktitle">{{ cocktail }}</h4>
+            <div class="normal-drink drink-card">
+                <div class="drink-style">Normal Recipe:</div>
+                <div class="result">
+                    <script>
+                        document.write(window.parser({{ result_normal }}))
+                    </script>
+                </div>
+            </div>
+            <div class="strange-drink drink-card">
+                <div class="drink-style">Strange Recipe:</div>
+                <div class="result">
+                    <script>
+                        document.write(window.parser({{ result_absurdl }}))
+                    </script>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </main>
+    <footer>
+        <p>A riff off of <a href="https://github.com/andrrey/openai-cocktails" target="_blank">openai-cocktails</a> by
+            <a href="https://alexmuen.ch" target="_blank">Alex Muench</a> || <a target="_blank"
+                href="https://www.flaticon.com/free-icons/cocktail-shaker" title="cocktail shaker icons">Cocktail shaker
+                icons
+                created by Freepik - Flaticon</a> || Dog Pic copyright &copy;
+            <script>document.write(new Date().getFullYear())</script> Alex Muench
+        </p>
+
+    </footer>
 </body>
